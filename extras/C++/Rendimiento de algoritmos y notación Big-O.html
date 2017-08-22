@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="//schema.org/Article" lang="es"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="contents" title="Archive" href="https://www.campusmvp.es/recursos/archive.aspx">
+	<link rel="start" title="campusMVP.es" href="https://www.campusmvp.es/recursos/">
+	<link type="application/rsd+xml" rel="edituri" title="RSD" href="https://www.campusmvp.es/recursos/rsd.axd">
+	<link type="application/rdf+xml" rel="meta" title="SIOC" href="https://www.campusmvp.es/recursos/sioc.axd">
+	<link type="application/apml+xml" rel="meta" title="APML" href="https://www.campusmvp.es/recursos/apml.axd">
+	<link type="application/rdf+xml" rel="meta" title="FOAF" href="https://www.campusmvp.es/recursos/foaf.axd">
+	<link type="application/rss+xml" rel="alternate" title="campusMVP.es (RSS)" href="https://www.campusmvp.es/recursos/syndication.axd">
+	<link type="application/atom+xml" rel="alternate" title="campusMVP.es (ATOM)" href="https://www.campusmvp.es/recursos/syndication.axd?format=atom">
+	<link type="application/opensearchdescription+xml" rel="search" title="campusMVP.es" href="https://www.campusmvp.es/recursos/opensearch.axd">
+	<link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/Global.css" rel="stylesheet" type="text/css"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/css.css" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google+ Authorship -->
+	<link rel="author" href="https://plus.google.com/+CampusmvpEs/posts"><link rel="publisher" href="https://plus.google.com/+CampusmvpEs/posts"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/core.css" rel="stylesheet"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/styles.css" rel="stylesheet"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/print-blog.css" type="text/css" media="print" rel="stylesheet"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/recursosstyles.css" rel="stylesheet"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/responsive.css" rel="stylesheet" media="all"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/destacados.css" rel="stylesheet" media="all"><link href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/botonesRRSS.css" rel="stylesheet" media="all">
+ 	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://www.campusmvp.es/recursos/Custom/Themes//campusMVP/include/html5.js"></script>
+	<![endif]-->
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-57x57.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="60x60" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-60x60.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="72x72" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-72x72.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="76x76" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-76x76.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="114x114" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-114x114.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="120x120" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-120x120.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="144x144" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-144x144.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="152x152" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-152x152.png?v=OmmnjwQerQ"><link rel="apple-touch-icon" sizes="180x180" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/apple-touch-icon-180x180.png?v=OmmnjwQerQ"><link rel="icon" type="image/png" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/favicon-32x32.png?v=OmmnjwQerQ" sizes="32x32"><link rel="icon" type="image/png" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/android-chrome-192x192.png?v=OmmnjwQerQ" sizes="192x192"><link rel="icon" type="image/png" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/favicon-96x96.png?v=OmmnjwQerQ" sizes="96x96"><link rel="icon" type="image/png" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/favicon-16x16.png?v=OmmnjwQerQ" sizes="16x16"><link rel="manifest" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/manifest.json?v=OmmnjwQerQ"><link rel="mask-icon" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/safari-pinned-tab.svg?v=OmmnjwQerQ" color="#5bbad5"><link rel="shortcut icon" href="https://www.campusmvp.es/recursos/Custom/Themes/campusMVP/favicons/favicon.ico?v=OmmnjwQerQ"><meta name="msapplication-TileColor" content="#042038"><meta name="msapplication-TileImage" content="favicons/mstile-144x144.png?v=OmmnjwQerQ"><meta name="msapplication-config" content="favicons/browserconfig.xml?v=OmmnjwQerQ"><meta name="theme-color" content="#042038">
+	<script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/cbgapi.loaded_0" async=""></script><script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/243072455886108" async=""></script><script async="" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/fbevents.js"></script><script type="text/javascript" async="" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/dc.js"></script><script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/es.axd"></script>
+	<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/01-jquery-1.js"></script>
+	<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/02-jquery.js"></script>
+	<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/04-jquery-jtemplates.js"></script>
+	<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/05-json2.js"></script>
+	<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/blog.js"></script>
+
+	
+
+
+    <!--Google Analytics -->
+<script type="text/javascript" class="cc-onconsent-analytics">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-264978-6']);
+    _gaq.push(['_setDomainName', 'campusmvp.es']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_addIgnoredOrganic', 'krasis']);
+    _gaq.push(['_addIgnoredOrganic', 'krasis.com']);
+    _gaq.push(['_addIgnoredOrganic', 'krasis press']);
+    _gaq.push(['_addIgnoredOrganic', 'krasispress']);
+    _gaq.push(['_addIgnoredOrganic', 'campusmvp']);
+    _gaq.push(['_addIgnoredOrganic', 'campus mvp']);
+    _gaq.push(['_addIgnoredOrganic', 'campusmvp.es']);
+    _gaq.push(['_addIgnoredOrganic', 'www.campusmvp.es']);
+    _gaq.push(['_addIgnoredOrganic', 'campus mvp.es']);
+    _gaq.push(['_addIgnoredOrganic', 'shop campus mvp']);
+    _gaq.push(['_addIgnoredOrganic', 'shop.campusmvp.com']);
+    _gaq.push(['_addIgnoredOrganic', 'shop campusmvp com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+
+<!--GA ends-->
+    <script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/a" data-sumo-site-id="d15bfcdeac59cd0737189683b826df635fc2a48249da17558c4dbeaa98c4e0e3" async="async"></script>
+
+<!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '243072455886108'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=243072455886108&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+	<meta name="keywords" content="Evergreen,Fundamentos">
+	<meta name="description" content="campusMVP.es - Recursos y trucos para programadores y desarrolladores web y de apps móviles, con información sobre cómo aprender a programar. - En programación el rendimiento o la complejidad de un algoritmo se suele medir utilizando una notación denominada Big-O, y también conocida como Notación Asintótica o Notación Landau.
+Ya os hemos contado aquí la importancia que tiene aprender a crear ciertos algoritmos aunque no los vayas a usar en el día a día. Pero además, en cualquier documentación o en cualquier libro o página que describa un algoritmo nos vamos a encontrar con la notación Big-O, por lo que es muy importante conocerla. 
+¿Qué significa esto exactamente y por qué nos importa?...">
+	<meta name="author" content="José Manuel Alarcón">
+<link rel="last" title="TRUCO VS #1: Encuentra cualquier cosa instantáneamente en Visual Studio" href="https://www.campusmvp.es/recursos/post/truco-vs-1-encuentra-cualquier-cosa-instantaneamente-en-visual-studio.aspx">
+<link rel="first" title="Modern.IE: la herramienta para testeo web de Microsoft " href="https://www.campusmvp.es/recursos/post/Microsoft-lanza-una-nueva-herramienta-de-testeo-Web.aspx">
+<link type="application/rss+xml" rel="alternate" title="Rendimiento de algoritmos y notación Big-O (RSS)" href="https://www.campusmvp.es/recursos/post/feed/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx?format=ATOM">
+<link type="application/rss+xml" rel="alternate" title="Rendimiento de algoritmos y notación Big-O (ATOM)" href="https://www.campusmvp.es/recursos/post/feed/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx?format=ATOM"><meta property="og:title" content="Rendimiento de algoritmos y notación Big-O - campusMVP.es"><meta property="og:type" content="website"><meta property="og:site_name" content="campusMVP.es"><meta property="og:url" content="https://www.campusmvp.es/recursos/post/rendimiento-de-algoritmos-y-notacion-big-o.aspx"><meta property="og:description" content="En programación el rendimiento o la complejidad de un algoritmo se suele medir utilizando una notación denominada Big-O, y también conocida como Notación Asintótica o Notación Landau.
+Ya os hemos contado aquí la importancia que tiene aprender a crear ciertos algoritmos aunque no los vayas a usar en el día a día. Pero además, en cualquier documentación o en cualquier libro o página que describa un algoritmo nos vamos a encontrar con la notación Big-O, por lo que es muy importante conocerla. 
+¿Qué significa esto exactamente y por qué nos importa?..."><meta property="article:author" content="JMAlarcon"><meta name="og:image" content="https://www.campusmvp.es/recursos/image.axd?picture=Big-O-Algoritmos.png"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Rendimiento de algoritmos y notación Big-O - campusMVP.es"><meta name="twitter:site" content="@jm_alarcon"><meta name="twitter:creator" content="@jm_alarcon"><meta name="twitter:url" content="https://www.campusmvp.es/recursos/post/rendimiento-de-algoritmos-y-notacion-big-o.aspx"><meta name="twitter:description" content="En programación el rendimiento o la complejidad de un algoritmo se suele medir utilizando una notación denominada Big-O, y también conocida como Notación Asintótica o Notación Landau.
+Ya os hemos contado aquí la importancia que tiene aprender a crear ciertos algoritmos aunque no los vayas a usar en el día a día. Pero además, en cualquier documentación o en cualquier libro o página que describa un algoritmo nos vamos a encontrar con la notación Big-O, por lo que es muy importante conocerla. 
+¿Qué significa esto exactamente y por qué nos importa?..."><meta name="twitter:image" content="https://www.campusmvp.es/recursos/image.axd?picture=Big-O-Algoritmos.png"><meta itemprop="name" content="Rendimiento de algoritmos y notación Big-O - campusMVP.es"><meta itemprop="description" content="En programación el rendimiento o la complejidad de un algoritmo se suele medir utilizando una notación denominada Big-O, y también conocida como Notación Asintótica o Notación Landau.
+Ya os hemos contado aquí la importancia que tiene aprender a crear ciertos algoritmos aunque no los vayas a usar en el día a día. Pero además, en cualquier documentación o en cualquier libro o página que describa un algoritmo nos vamos a encontrar con la notación Big-O, por lo que es muy importante conocerla. 
+¿Qué significa esto exactamente y por qué nos importa?..."><meta itemprop="url" content="https://www.campusmvp.es/recursos/post/rendimiento-de-algoritmos-y-notacion-big-o.aspx"><meta itemprop="author" content="JMAlarcon"><meta property="image" content="https://www.campusmvp.es/recursos/image.axd?picture=Big-O-Algoritmos.png"><title>
+	Rendimiento de algoritmos y notación Big-O
+</title><script>
+    fbq('track', 'ViewContent');
+    </script><style></style></head>
+<!-- Evento visualizacion contenido -->
+    
+<!-- Evento visualizacion contenido -->
+<body class="ltr"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-floating cc-type-info cc-theme-classic cc-bottom cc-left cc-color-override--854159340 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">Usamos cookies propias y de terceros para medir y mejorar la experiencia de uso en esta página. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="http://www.krasis.com/aviso_legal.htm" target="_blank">Ver política de privacidad</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Entendido</a></div><!--googleon: all--></div>
+    <form method="post" action="./Rendimiento-de-algoritmos-y-notacion-Big-O.aspx?id=66e1b905-146b-4930-b845-446771873d3c" id="aspnetForm">
+<div class="aspNetHidden">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="5RXpiUaONAmCBSTpFXaBFmDhjfrs95Gh2JUTGDZ06jLft6ZCsNFPgWZuexyS9gDYkYIzNJ1SnWlMeLFWIypvA8uZMDn1KTZURzL8bApzn02vsB4WATHKGFassAMqsApE17MtoGO18KnhQ1j803DDkaWVy8jqZ9QfGtFUDztz37yAGxDU4SWVvCPMwiot8Dwk1ENJyZfArqqb3KvWSvPSqw7laHAh4kSb+B08HGYL5nst0wLh1g2HoueHdgN5MG5153A0kvxQns7L8pU0QOLQpZPtem7OVeDuhd7jtPASxjFnBHymYmky05vYLkDvZLgdhp0NGw==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+
+<script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/res-2039711841.axd" type="text/javascript"></script>
+
+	<script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/ads.js" type="text/javascript"></script>
+	<script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/AdEngine.js" type="text/javascript"></script>
+
+     <div id="header-wrapper">
+
+                     <a class="display" id="nav-toggle" href="#" title="menú navegaci?n principal"> <img class="nav-toggle-icon" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/nav-toggle-icon.png" alt="Menú de navegación"><span>Menú</span></a>
+                     <!--Aqu? va la barra del men? responsive-->
+         <div class="Header">
+
+
+		        <div id="inner-header" class="col-full">
+                	<!--buscador-->
+			         <div id="Div2" class="header-search">
+				     <div id="buscador" class="widget-container widget_search">
+
+                          <iframe id="buscador-google" onload="this.style.visibility='visible';" style="visibility: visible;" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/search-iframe.html" scrolling="no" height="40px" frameborder="0">   </iframe>
+			     </div>
+			<!--Fin buscador-->
+                 </div>
+
+
+
+                    <!--LOGO & TAGLINE-->
+
+                <div id="logo"><h1> <a title="logotipo de campusmvp.es" href="https://www.campusmvp.es/">CampusMVP.es </a></h1></div>
+                <h2 id="tagline">Los mejores <a title="Los mejores cursos online para desarrolladores" href="https://www.campusmvp.es/catalogo/">cursos online</a>
+                para programadores</h2>
+
+                     <!-- FIN LOGO & TAGLINE-->
+
+
+                <div id="main-nav" class="col-full" role="navigation">
+
+
+
+
+
+	         <div class="menus">
+
+             <span id="close-area"><a id="logoMenu" title="inicio" href="https://www.campusmvp.es/"><span>Inicio</span></a><a id="close-menu" class="close" title="cerrar" href="#">X</a></span>
+
+        <!--Navegaci?n Principal-->
+         <ul id="navigation">
+
+	            <li class="menu-item home-boton"><a class="Navegation1 iconoInicio" href="https://www.campusmvp.es/" title="Inicio CampusMVP"><img class="Ico-full-size-screen" alt="Inicio" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/home-ico.png"> <img class="Ico-responisve" alt="Inicio" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/home-ico-responsive.png"></a></li>
+				<li class="menu-item "><span><a class="Navegation1" href="https://www.campusmvp.es/catalogo" title="Cursos y libros">Cursos y Libros</a></span></li>
+			    <li class="menu-item"><span><a class="Navegation1" href="https://www.campusmvp.es/conocenos.htm">Conócenos</a></span></li>
+				<li class="menu-item"><span><a class="Navegation1" href="https://www.campusmvp.es/opiniones-campusmvp.htm" title="Opiniones de alumnos">Opiniones</a></span> </li>
+				<li class="menu-item"><span><a class="Navegation1" href="https://www.campusmvp.es/empresas.htm">Empresas</a></span> </li>
+              <li class="menu-item selected"><span><a class="NavegationSelect1" href="https://www.campusmvp.es/recursos/">Recursos</a></span> </li>
+                <li class="menu-item"><span><a class="Navegation1" href="https://www.campusmvp.es/contacto.htm">Contacto</a></span> </li>
+
+
+    </ul>
+        <!--Fin Navegaci?n Principal-->
+          <span class="to-display-responsive">
+           <ul class="usuario">
+            <li> <iframe id="iframe-user" scrolling="no" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/userstatus.html" style="visibility: visible;" onload="this.style.visibility='visible';" height="40px" frameborder="0"></iframe></li>
+           </ul>
+         </span>
+
+
+      </div>
+             </div>
+
+
+
+             </div>
+
+        </div>
+
+
+     </div>
+
+
+        <div class="lista-categorias">
+             <div id="categoriasToggle">
+                    <span id="backToggle" class="responsiveCategorias">Categorías</span>
+                    </div>
+
+            <ul id="categorylist"><li><a href="https://www.campusmvp.es/recursos/category/Acceso-a-Datos.aspx" title="Categoría: Acceso a Datos">Acceso a Datos</a></li><li><a href="https://www.campusmvp.es/recursos/category/Desarrollo-movil.aspx" title="Categoría: Desarrollo móvil">Desarrollo móvil</a></li><li><a href="https://www.campusmvp.es/recursos/category/Desarrollo-Web.aspx" title="Categoría: Desarrollo Web">Desarrollo Web</a></li><li><a href="https://www.campusmvp.es/recursos/category/DevFacts.aspx" title="Categoría: DevFacts">DevFacts</a></li><li><a href="https://www.campusmvp.es/recursos/category/General.aspx" title="Categoría: General">General</a></li><li><a href="https://www.campusmvp.es/recursos/category/Herramientas.aspx" title="Categoría: Herramientas">Herramientas</a></li><li><a href="https://www.campusmvp.es/recursos/category/Lenguajes-y-plataformas.aspx" title="Categoría: Lenguajes y plataformas">Lenguajes y plataformas</a></li><li><a href="https://www.campusmvp.es/recursos/category/Trucos.aspx" title="Categoría: Trucos">Trucos</a></li></ul>
+
+        </div>
+
+        <div class="Page-Wrapper Container">
+
+                     <div id="logo-print"><img src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/logo-campusmvp-print.jpg"> <p>La mejor forma de Aprender Programación online y en español <span>www.campusmvp.es</span></p> </div>
+
+            <section class="Content-Wrapper">
+                
+				<!-- POSTS DESTACADOS -->
+				
+				<!-- CONTENIDOS DE POSTS -->
+				
+  
+  
+
+  
+<div id="postnavigation">
+    <a href="https://www.campusmvp.es/recursos/post/Las-5-novedades-que-debes-conocer-sobre-el-evento-de-Apple-para-desarrolladores.aspx" class="nav-next">Las 5 novedades que debes conocer sobre el evento de Apple para desarrolladores</a> |
+    <a href="https://www.campusmvp.es/recursos/post/Un-poco-de-nostalgia-Clippy-y-sus-amigos-vuelven-a-tu-navegador.aspx" class="nav-prev">Un poco de nostalgia: Clippy y sus amigos vuelven a tu navegador</a>
+</div>
+
+ 
+  
+
+<article class="post" id="post0">
+<!-- TITULO POST -->
+
+    <h1 class="PostTitle">
+        Rendimiento de algoritmos y notación Big-O
+    </h1>
+
+<!-- /TITULO POST -->
+<!-- AUTOR -->
+<div class="PostInfo Clear">
+    Por <span class="AuthorName"><a href="https://www.campusmvp.es/recursos/author/JMAlarcon.aspx">José Manuel Alarcón</a></span>. 
+    <span class="PubDate">Publicado el <time datetime="2016-06-14" itemprop="dateCreated">14 de junio de 2016 a las 07:00</time></span>
+</div>
+<!-- /AUTOR -->
+
+<!-- PUBLI -->
+<div class="bloquepubli" id="publi" style="display:none;"></div>
+<!-- /PUBLI -->
+
+
+
+<!-- CUERPO -->
+<div class="PostBody text">
+    <p><img style="border: 0px currentcolor; display: none; background-image: none;" title="Big-O-Algoritmos" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/image.png" alt="Big-O-Algoritmos" border="0">En programación el <strong>rendimiento o la complejidad de un algoritmo</strong> se suele medir utilizando una notación denominada <strong>Big-O</strong>, y también conocida como <strong>Notación Asintótica</strong> o <strong>Notación Landau </strong>(en honor a uno de sus inventores, a&nbsp; principios del siglo pasado, <a href="https://en.wikipedia.org/wiki/Edmund_Landau" target="_blank">Edmund Landau</a>).</p>
+<p>Ya os hemos contado aquí <a href="https://www.campusmvp.es/recursos/post/Ser-mejor-programador-aprendiendo-algoritmos-%28y-de-paso-Swift%29.aspx" target="_blank">la importancia que tiene aprender a crear ciertos algoritmos</a>
+ aunque no los vayas a usar en el día a día. Pero además, en cualquier 
+documentación o en cualquier libro o página que describa un algoritmo 
+nos vamos a encontrar con la notación Big-O, por lo que es muy 
+importante conocerla. Por ejemplo, si consultamos <a href="https://msdn.microsoft.com/en-us/library/system.collections.sortedlist.removeat.aspx" target="_blank">la documentación de MSDN para la función RemoveAt de una SortedList</a> nos dice qué es <strong>una operación O(n)</strong>:</p>
+<p align="center"><img style="border: 0px currentcolor; display: inline; background-image: none;" title="SortedList.RemoveAt" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/image_003.png" alt="SortedList.RemoveAt" border="0"></p>
+<blockquote>
+<p><strong>Nota</strong>: en general soy de los que opino que cualquier 
+documentación técnica oficial es mucho mejor leerla en inglés, y éste es
+ un buen ejemplo del porqué: en la versión en español de MSDN la 
+notación Big-O aparece como "<em>E/s(n)</em>", que no tiene nada que ver, fruto de la traducción automática, que no va nada fina.</p>
+</blockquote>
+<p>Y si consultamos el <a href="https://msdn.microsoft.com/en-us/library/system.collections.arraylist.item.aspx" target="_blank">método Item</a> para localizar o establecer un elemento en una colección de tipo ArrayList, nos dice que <strong>su complejidad es O(1)</strong>.</p>
+<p>¿Qué significa esto exactamente y por qué nos importa?</p>
+<p>Vamos a verlo...</p>
+<h2>Entendiendo la notación Big-O</h2>
+<p>La notación Big-O nos proporciona <strong>una manera de saber cómo se va a comportar un algoritmo en función de los argumentos</strong> que le pasemos y la escala de los mismos.</p>
+<p>Por ejemplo, imagínate una función que se utiliza para localizar un 
+elemento dentro de una lista de elementos previamente guardados. Si la 
+documentación de la misma nos dice que es una operación de tipo <strong>O(1)</strong>, quiere decir que da igual cuántos elementos haya en la lista, <strong>la operación siempre tarda lo mismo</strong>. Para ser más exactos deberíamos decir que <strong>el esfuerzo de cómputo necesario es el mismo</strong>.</p>
+<p>Por eso, por ejemplo, que en&nbsp;la documentación el indizador Item 
+de un ArrayList que vimos antes, tenga complejidad O(1) quiere decir que
+ da exactamente igual que la colección tenga uno o un millón de 
+elementos: insertar o recuperar un elemento siempre tarda más o menos lo
+ mismo.</p>
+<p>Ahora supongamos que tenemos una función que dibuja en una gráfica 
+los puntos que le pasemos en una matriz. Su documentación nos dice que 
+su complejidad es <strong>O(n)</strong>. Esto quiere decir, para 
+entendernos, que si pintar 1 punto implica, por ejemplo, 10ms, pintar 2 
+implicaría 20ms, 3 puntos serían 30ms, etc... O sea, <strong>el tiempo necesario para ejecutar la función es función directa y lineal del número de elementos que le pasemos</strong>.</p>
+<p>Es muy importante conocer el tipo de función/curva que se asocia con la ejecución de una función ya que nos permitirá <strong>saber de antemano si el rendimiento de nuestra aplicación se puede resentir</strong>
+ en caso de que el tamaño de los datos a manejar aumente mucho. Así, 
+entre dos algoritmos/funciones que hagan lo mismo, deberíamos elegir el 
+que tenga una complejidad asintótica menor, para lo cual consultaremos 
+la notación Big-O asociada al mismo.</p>
+<p>Atendiendo a su complejidad, las notaciones Big-O más comunes para 
+todo tipo de algoritmos y funciones son las que se muestran en esta 
+lista:</p>
+<ul>
+<li><strong>O(1): constante</strong>. La operación no depende del tamaño
+ de los datos. Es el caso ideal, pero a la vez probablemente el menos 
+frecuente. No se ve en la gráfica de más abajo porque la logarítmica le 
+pasa justo por encima y la tapa.</li>
+<li><strong>O(n): lineal</strong>. El tiempo de ejecución es directamente proporcional al tamaño de los datos. Crece en una línea recta.</li>
+<li><strong>O(log n): logarítmica</strong>. por regla general se asocia con algoritmos que "trocean" el problema para abordarlo, como por ejemplo una <a href="https://es.wikipedia.org/wiki/Algoritmo_de_b%C3%BAsqueda" target="_blank">búsqueda binaria</a>.</li>
+<li><strong>O(nlogn):</strong> en este caso se trata de funciones 
+similares a las anteriores, pero que rompen el problema en varios trozos
+ por cada elemento, volviendo a recomponer información tras la ejecución
+ de cada "trozo". Por ejemplo, el algoritmo de búsqueda <a href="https://es.wikipedia.org/wiki/Quicksort" target="_blank">Quicksort</a>.</li>
+<li><strong>O(n<sup>2</sup>): cuadrática</strong>. Es típico de 
+algoritmos que necesitan realizar una iteración por todos los elementos 
+en cada uno de los elementos a procesar. Por ejemplo el algoritmo de <a href="https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja" target="_blank">ordenación de burbuja</a>. Si tuviese que hacer la iteración más de una vez serían de complejidad O(n<sup>3</sup>), O(n<sup>4</sup>), etc... pero se trata de casos muy raros y poco optimizados.</li>
+<li><strong>O(2<sup>n</sup>): exponencial</strong>. Se trata de 
+funciones que duplican su complejidad con cada elemento añadido al 
+procesamiento. Son algoritmos muy raros pues en condiciones normales no 
+debería ser necesario hacer algo así. Un ejemplo sería, por ejemplo, el 
+cálculo recursivo de la serie de Fibonacci, que es muy poco eficiente 
+(se calcula llamándose a sí misma la función con los dos números 
+anteriores: <span style="font-family: Courier New;">F(n)=F(n-1)+F(n-2))</span>.</li>
+<li><strong>O(n!); explosión combinatoria</strong>. Un algoritmo que 
+siga esta complejidad es un algoritmo totalmente fallido. Una explosión 
+combinatoria se dispara de tal manera que cuando el conjunto crece un 
+poco, lo normal es que se considere computacionalmente inviable. Solo se
+ suele dar en algoritmos que tratan de resolver algo por la mera fuerza 
+bruta. No deberías verlo nunca en un software "real".</li>
+</ul>
+<p><strong>Podemos verlo gráficamente</strong> a continuación (he usado la herramienta gratuita <a href="https://www.desmos.com/" target="_blank">Desmos</a> para graficarlo):</p>
+<p align="center"><a href="https://www.campusmvp.es/recursos/image.axd?picture=Complejidad-Algoritmica.png" target="_blank"><img style="border: 0px currentcolor; display: inline; background-image: none;" title="Complejidad-Algoritmica" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/image_002.png" alt="Complejidad-Algoritmica" border="0"></a><br><span style="font-size: xx-small;"><strong>Pulsa la imagen para aumentarla</strong></span></p>
+<blockquote>
+<p>En el eje horizontal tenemos el número de elementos, y en el vertical el tiempo.</p>
+</blockquote>
+<p>Como podemos observar, <strong>a medida que aumenta la complejidad, el tiempo necesario para completar la tarea crece mucho</strong>,
+ pudiendo llegar a aumentar enormemente en algunos casos en cuanto hay 
+más datos a manejar. Creo que verlo gráficamente es la mejor manera de 
+darse cuenta de&nbsp;su importancia.</p>
+<blockquote>
+<p>Si te encuentras con una función con complejidad cuadrática (<em>O(n<sup>2</sup>)</em>) o exponencial (<em>O(2<sup>n</sup>)</em>) por regla general será señal de que el algoritmo necesita una revisión urgente, y mejor no utilizarlo.</p>
+</blockquote>
+<p>Lo interesante de esta notación es que <strong>nos permite comparar varios algoritmos equivalentes sin preocuparnos de hacer pruebas de rendimiento que dependen del hardware</strong>
+ utilizado. Es decir, ante resultados equivalentes podemos elegir el 
+algoritmo de mayor rendimiento, que lo será siempre independientemente 
+del hardware si el conjunto de datos es lo suficientemente grande (en 
+conjuntos pequeños un hardware más rápido puede dar resultados más 
+rápidos para un algoritmo menos eficiente, pero a medida que el conjunto
+ crece ya no será así).</p>
+<p>Por eso, a partir de ahora, cuando veas que una función documenta explícitamente su complejidad usando la notación Big-O, <strong>presta mucha atención y no te olvides de las implicaciones que puede tener</strong>
+ en tu aplicación el hecho de utilizarla. Del mismo modo, cuando crees 
+un algoritmo para resolver un problema en tu aplicación, es interesante 
+anotar en la documentación del mismo (aunque sea en los comentarios de 
+la cabecera) cuál es la complejidad algorítmica del mismo en notación 
+Big-O. Eso ayudará a cualquier programador que venga detrás, tanto a 
+usarlo como a tener que optimizarlo, y sabrá cuál es la lógica a batir.</p>
+<p>Aquí tienes <a href="http://bigocheatsheet.com/" target="_blank">una tabla muy completa</a>
+ con la complejidad de los principales algoritmos para estructuras de 
+datos, ordenación de matrices, operaciones en grafos y operaciones de 
+montón (<em>heap</em>).</p>
+<p>Espero que esta explicación te haya aclarado los conceptos y que no vuelvas a ver la notación Big-O de la misma manera :-)</p>
+</div>
+<!-- /CUERPO -->
+
+
+<!-- PUBLI -->
+<div class="bloquepubli" id="publi2" style="display:none;"></div>
+<!-- /PUBLI -->
+<!-- INFO DESTACADA AUTOR -->
+<div class="Avatar-nombre-autor">
+    <span class="authorInfo">
+	
+<img class="photo" alt="José Manuel Alarcón" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/36420273b2f101ed57d8a8b113096425.jpg" height="80" width="80">
+	Director de <a href="https://www.campusmvp.es/">campusMVP</a>, es 
+ingeniero industrial y especialista en consultoría de empresa. Ha 
+escrito diversos libros, habiendo publicado hasta la fecha cientos de 
+artículos sobre informática e ingeniería en publicaciones 
+especializadas. Puedes seguirlo en Twitter en <a href="https://twitter.com/jm_alarcon" target="_blank">@jm_alarcon</a> o leer sus blog <a target="_blank" href="http://www.jasoft.org/blog/">técnico</a> o <a target="_blank" href="https://jmalarcon.es/">personal</a>.
+	<span class="todos-los-articulos"><a href="https://www.campusmvp.es/recursos/author/JMAlarcon.aspx">Ver todos los posts de José Manuel Alarcón</a></span>
+    </span>
+</div>
+<!-- /INFO DESTACADA AUTOR -->
+
+<!-- CALL TO ACTION TELEGRAM -->
+    <div class="cta-after-post cta-after-post-telegram">
+        <a class="cta-after-post-telegram__link-logo" href="https://t.me/campusmvp" target="_blank" title="Ir al telegram de campusMVP en una nueva ventana" onclick="_gaq.push(['_trackEvent', 'Telegram', 'CTA_Telegram__post', 'CTA_Telegram__postlink--logo']);"><img class="cta-after-post-telegram__link-logo__imagen" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/telegram-logo-50.png"></a>
+        <h3 class="cta-after-post-telegram__title"><strong>No te pierdas ningún post</strong></h3>
+        
+        <p><a class="cta-after-post-telegram__link-texto" href="https://t.me/campusmvp" target="_blank" title="Ir al telegram de campusMVP en una nueva ventana" onclick="_gaq.push(['_trackEvent', 'Telegram', 'CTA_Telegram__post', 'CTA_Telegram__postlink--texto']);">Únete gratis a nuestro canal en Telegram</a> y te avisaremos en el momento en el que publiquemos uno nuevo.</p>
+    </div>
+<!-- /CALL TO ACTION TELEGRAM -->
+
+<!-- COMPARTIR EN REDES SOCIALES -->
+<div id="compartir-redes-sociales">
+    <p class="social-cta">¿Te ha gustado este artículo? ¡Compártelo!</p>
+        <div id="Sharing" title="Compartir">
+			<div id="ShareTwitter">
+				<a class="resp-sharing-button__link" rel="nofollow" href="https://twitter.com/intent/tweet/?text=Rendimiento+de+algoritmos+y+notaci%c3%b3n+Big-O&amp;url=https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx" target="_blank" aria-label="Twitter">
+					<div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--medium">
+						<div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+							<svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+									<path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M17.262,9.385 c0.006,0.113,0.008,0.226,0.008,0.34c0,3.478-2.647,7.489-7.488,7.489c-1.486,0-2.87-0.437-4.035-1.184 c1.374,0.161,2.771-0.207,3.896-1.089c-1.151-0.022-2.123-0.783-2.458-1.829c0.396,0.075,0.803,0.061,1.188-0.046 c-1.204-0.24-2.111-1.305-2.111-2.579c0-0.011,0-0.023,0-0.035c0.355,0.197,0.762,0.315,1.192,0.33 c-0.706-0.473-1.171-1.277-1.171-2.19c0-0.482,0.13-0.934,0.356-1.324c1.298,1.593,3.237,2.642,5.425,2.75 c-0.045-0.191-0.068-0.394-0.068-0.599c0-1.454,1.179-2.632,2.633-2.632c0.757,0,1.44,0.319,1.921,0.832 c0.6-0.119,1.95-0.266,1.95-0.266C18.147,7.882,17.776,9.013,17.262,9.385z"></path>
+							</svg>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div id="ShareFacebook">
+				<a class="resp-sharing-button__link" rel="nofollow" href="https://facebook.com/sharer/sharer.php?u=https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx" target="_blank" aria-label="Facebook">
+					<div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--medium">
+						<div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+							<svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+								<path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M15.595,11.5H13.5c0,3.013,0,7,0,7h-3 c0,0,0-3.951,0-7h-2v-2h2V8.336c0-1.1,0.352-2.819,2.649-2.819L15.5,5.524V7.83c0,0-1.163,0-1.408,0 c-0.244,0-0.592,0.124-0.592,0.647V9.5h2.339L15.595,11.5z"></path>
+							</svg>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div id="ShareLinkedIn">
+				<a class="resp-sharing-button__link" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx&amp;title=Rendimiento+de+algoritmos+y+notaci%c3%b3n+Big-O" target="_blank" aria-label="LinkedIn">
+					<div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--medium">
+						<div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+							<svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+								<path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M9.5,16.5h-2v-7h2V16.5z M8.5,7.5 c-0.553,0-1-0.448-1-1c0-0.552,0.447-1,1-1s1,0.448,1,1C9.5,7.052,9.053,7.5,8.5,7.5z M18.5,16.5h-3V13c0-0.277-0.225-0.5-0.5-0.5 c-0.276,0-0.5,0.223-0.5,0.5v3.5h-3c0,0,0.031-6.478,0-7h3v0.835c0,0,0.457-0.753,1.707-0.753c1.55,0,2.293,1.12,2.293,3.296V16.5z"></path>
+							</svg>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div id="ShareGPlus">
+				<a class="resp-sharing-button__link" rel="nofollow" href="https://plus.google.com/share?url=https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx" target="_blank" aria-label="Google+">
+					<div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--medium">
+						<div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+							<svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+								<g>
+									<path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"></path>
+									<polygon points="23.5,9.5 20.5,9.5 20.5,6.5 18.5,6.5 18.5,9.5 15.5,9.5 15.5,11.5 18.5,11.5 18.5,14.5 20.5,14.5 20.5,11.5  23.5,11.5 	"></polygon>
+								</g>
+							</svg>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div id="SharePocket">
+				<a class="resp-sharing-button__link" rel="nofollow" href="https://getpocket.com/edit?url=https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx" target="_blank" aria-label="Pocket">
+					<div class="resp-sharing-button resp-sharing-button--pocket resp-sharing-button--medium">
+						<div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+							<svg enable-background="new 0 0 128 128" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+								<g id="_x37__stroke">
+									<g>
+										<rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"></rect>
+										<path clip-rule="evenodd" d="M64.089,65.128    c-0.324-0.301-0.57-0.523-0.809-0.752c-7.747-7.442-15.485-14.893-23.243-22.323c-3.554-3.403-9.008-3.278-12.394,0.24    c-3.335,3.465-3.289,8.953,0.218,12.342c10.053,9.712,20.135,19.395,30.234,29.06c3.365,3.22,8.546,3.187,11.959,0.008    c1.367-1.273,2.7-2.582,4.047-3.877c8.635-8.299,17.265-16.604,25.909-24.893c2.077-1.992,3.165-4.398,2.892-7.263    c-0.347-3.643-2.268-6.265-5.717-7.521c-3.438-1.252-6.565-0.496-9.218,2.038c-4.342,4.147-8.664,8.317-12.994,12.478    C71.37,58.128,67.765,61.594,64.089,65.128z M64.067,6.688c17.398,0,34.796-0.005,52.194,0.003    c5.391,0.003,10.025,3.481,11.368,8.535c0.212,0.798,0.345,1.643,0.346,2.467c0.008,13.594,0.075,27.189-0.048,40.782    c-0.125,13.888-4.326,26.462-12.875,37.441c-9.513,12.219-21.782,20.266-36.903,23.761c-34.72,8.023-67.887-14.386-76.074-45.75    c-1.091-4.181-1.835-8.424-1.871-12.742C0.084,46.724-0.006,32.263,0,17.803C0.003,11.716,5.433,6.696,11.773,6.691    C29.204,6.68,46.636,6.688,64.067,6.688z" fill="#FFF" fill-rule="evenodd" id="Pocket_1_"></path>
+									</g>
+								</g>
+							</svg>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			
+        </div>
+</div>
+<!-- /COMPARTIR EN REDES SOCIALES -->
+
+
+<!-- VALORACION POST -->
+<div class="AdminLine">
+    <div class="PostRating">
+        
+    </div>
+    <div class="AdminLinks"></div>
+</div>
+<div style="clear:both;">
+<!-- /VALORACION POST -->
+
+
+<!-- METADATOS -->
+<div class="PostCategories" title="Categorías">
+    Archivado en: <a href="https://www.campusmvp.es/recursos/category/Lenguajes-y-plataformas.aspx">Lenguajes y plataformas</a>
+</div>
+
+
+<div class="CommentCount" title="Comentarios">
+    <strong><a class="commentslink" rel="nofollow" href="https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx#comment"> 0 comentarios</a></strong>
+</div>
+
+<!-- /METADATOS -->
+<br>
+
+
+
+<!-- SUSCRIPCION BOLETIN -->
+<!--<div id="Boletin-Wrapper">
+    <div id="boletinPost-Cta">
+        <h2>Suscríbete al Boletín de campusMVP</h2>
+        <p>Recibirás trucos, novedades y recursos interesantes</p>
+    </div>
+    <img  alt="Avión boletín" class="avion-boletin-post" src="https://www.campusmvp.es/recursos/Custom/themes/campusMVP/img/avion-boletin-post.png" >
+    <div class="Boletin-Post-View">
+        <div class="Boletin-Post-View-Inner">
+                <input id="boletinPost-NewsLetterId" type="hidden" value="24" /> <label id="boletinPost-label-name" for="Name">Nombre:</label> 
+                <input id="boletinPost-Name" class="CampoForm" type="text" size="25" maxlength="15" />
+                <label id="boletinPost-label-lastname" for="LastName">Apellidos:</label>
+                <input id="boletinPost-LastName" class="CampoForm" type="text" size="25" maxlength="20" /> 
+                <label id="boletinPost-label-email" for="Email">*Email:</label>
+                <input id="boletinPost-Email" class="CampoForm" type="text" size="25" maxlength="50" />
+                <input id="boletinPost-Suscribirse" class="CampoForm" type="button" onclick="return submitSubscription('boletinPost-');" value="Suscribirse" />&nbsp;
+        </div>
+     </div>
+</div>-->
+<!-- /SUSCRIPCION BOLETIN -->
+
+
+
+</div></article>
+
+<!-- CARGA LA PUBLICIDAD -->
+<script type="text/javascript">
+    CargarAnuncio("publi", "Evergreen,Fundamentos", "Lenguajes y plataformas");
+    CargarAnuncio("publi2", "Evergreen,Fundamentos", "Lenguajes y plataformas");
+</script>
+
+
+  
+  
+  
+    <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+      <rdf:description rdf:about="https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx" dc:identifier="https://www.campusmvp.es/recursos/post/Rendimiento-de-algoritmos-y-notacion-Big-O.aspx" dc:title="Rendimiento de algoritmos y notación Big-O" trackback:ping="https://www.campusmvp.es/recursos/trackback.axd?id=66e1b905-146b-4930-b845-446771873d3c">
+    </rdf:description></rdf:rdf>
+  
+  
+  <div id="relatedPosts"><h3>Publicaciones relacionadas</h3><div><a href="https://www.campusmvp.es/recursos/post/Ser-mejor-programador-aprendiendo-algoritmos-%28y-de-paso-Swift%29.aspx">Ser mejor programador aprendiendo algoritmos (y de paso Swift)</a><span>Los algoritmos. Esos conceptos abstractos que se estudian en la teoría de computación y que luego ra...</span><a href="https://www.campusmvp.es/recursos/post/las-10-principales-diferencias-entre-angularjs-y-angular.aspx">Las 10 principales diferencias entre AngularJS y Angular</a><span>Antes de nada debes tener claro que, a pesar de compartir el nombre, AngularJS y Angular no tienen n...</span><a href="https://www.campusmvp.es/recursos/post/cadenas-mutables-e-inmutables-en-java-cuando-usar-string-stringbuilder-y-stringbuffer.aspx">Cadenas mutables e inmutables en Java. Cuándo usar String, StringBuilder y StringBuffer</a><span>Java cuenta con múltiples tipos de datos para trabajar con cadenas de caracteres. El más conocido de...</span></div></div>
+  
+  
+
+<div class="well-global">
+    
+
+    <div id="commentlist" style="display: block">
+            
+    </div>
+</div>
+
+
+
+
+    <div id="comment-form">
+        <img src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/ajax-loader.gif" alt="Saving the comment" style="display: none" id="ajaxLoader" height="24" width="24">
+        <span id="status"></span>
+        
+<div class="commentForm">
+    <h3 id="addcomment">Agregar comentario</h3>
+    <p>
+        <label for="txtName" class="lbl-user">Nombre*</label>
+        <input class="txt-user" name="txtName" id="txtName" tabindex="2" type="text">
+    </p>
+    <p>
+        <label for="txtEmail" class="lbl-email">Correo Electrónico*</label>
+        <input class="txt-email" id="txtEmail" tabindex="3" type="text">
+        <span id="gravatarmsg"></span>
+    </p>
+    <p>
+        <label for="txtWebsite" class="lbl-website">Sitio Web</label>
+        <input class="txt-website" id="txtWebsite" tabindex="4" type="text">
+        </p>
+    <p>
+        <label for="txtContent" class="lbl-content">Comentario*</label>
+        <textarea class="txt-content" tabindex="7" id="txtContent" cols="50" rows="10" name="txtContent"></textarea>
+    </p>
+    <p>
+        <input id="cbNotify" class="cmnt-frm-notify" style="width: auto" tabindex="8" type="checkbox">
+        <label for="cbNotify" style="width: auto; float: none; display: inline; padding-left: 5px">Notificarme cuando se publiquen nuevos comentarios</label>
+    </p>
+    <p>
+        <input id="btnSaveAjax" class="btn-save" style="margin-top: 10px" value="Guardar comentario " onclick="return BlogEngine.validateAndSubmitCommentForm()" tabindex="10" type="button">
+    </p>
+</div><input name="ctl00$cphBody$ucCommentList$hiddenReplyTo" id="ctl00_cphBody_ucCommentList_hiddenReplyTo" type="hidden">
+        <p id="cancelReply" style="display: none;">
+            <a href="javascript:void(0);" onclick="BlogEngine.cancelReply();">Cancelar respuesta al comentario</a>
+        </p>
+        <p><label for="simpleCaptchaValue" style="margin-right: 5px;">Huevo, perro, abeja o viernes, ¿cuál es un día de la semana?</label><input id="simpleCaptchaValue" name="simpleCaptchaValue" tabindex="0" maxlength="30" type="text"><span id="spnSimpleCaptchaIncorrect" style="display:none;color:Red;">The captcha value you provided is incorrect.
+</span></p><input name="ctl00$cphBody$ucCommentList$hfCaptcha" id="ctl00_cphBody_ucCommentList_hfCaptcha" value="61dce13a-9034-40f1-9a2e-b8a9eadeaacd" type="hidden">
+    </div>
+    <script type="text/javascript">
+        BlogEngine.comments.flagImage = BlogEngine.$("imgFlag");
+        BlogEngine.comments.contentBox = BlogEngine.$("txtContent");
+        BlogEngine.comments.moderation = true;
+	    BlogEngine.comments.checkName = true;
+	    BlogEngine.comments.postAuthor = "JMAlarcon";
+	    BlogEngine.comments.nameBox = BlogEngine.$("txtName");
+	    BlogEngine.comments.emailBox = BlogEngine.$("txtEmail");
+	    BlogEngine.comments.websiteBox = BlogEngine.$("txtWebsite");
+	    BlogEngine.comments.countryDropDown = BlogEngine.$("ddlCountry");
+	    BlogEngine.comments.controlId = 'ctl00$cphBody$ucCommentList';
+	    BlogEngine.comments.captchaField = BlogEngine.$('ctl00_cphBody_ucCommentList_hfCaptcha');
+        BlogEngine.comments.replyToId = BlogEngine.$("ctl00_cphBody_ucCommentList_hiddenReplyTo");
+    </script>
+
+
+<script type="text/javascript">
+    function toggle_visibility(id, id2) {
+        var e = document.getElementById(id);
+        var h = document.getElementById(id2);
+        if (e.style.display == 'block') {
+            e.style.display = 'none';
+            h.innerHTML = "+";
+        }
+        else {
+            e.style.display = 'block';
+            h.innerHTML = "-";
+        }
+    }
+</script>
+
+
+
+    
+            </section>
+            <aside class="Widgets-Wrapper">
+				<!-- Hidden logo image - used as a preview when sharing and if there isn't another image in the page -->
+				<img src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/logo.jpg" style="display:none;">
+                <div id="widgetzone_be_WIDGET_ZONE" class="widgetzone">
+<div class="Widget textbox" id="widgetdc6be479-febc-449e-8260-9bf802067fcb">
+  
+    
+    <div class="WidgetContent">
+        <script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/banners.js"></script><div id="RandomBannersDescargables"><a href="http://promos.campusmvp.com/10-gambadas-programadores/?cmvpad=10GambSideRec" target="_blank" title="En una ventana nueva, te lleva a la página de descarga del eBook gratuito sobre los 10 errores más comunes de los programadores"><img src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/Banner-Errores-Programadores-CampusMVP.gif" alt="En una ventana nueva, te lleva a la página de descarga del eBook gratuito sobre los 10 errores más comunes de los programadores"></a></div>
+          
+    </div>
+</div>
+<div class="Widget textbox" id="widget8448517f-c6af-41f9-aab4-67013faf890e">
+  
+    
+    <div class="WidgetContent">
+        <ul id="social-widget">
+<li><a class="linkedin-widget" href="https://www.linkedin.com/company/campusmvp" target="_blank"> <span>Linkedin</span></a></li>
+<li><a class="tw-widget" href="https://twitter.com/campusmvp" target="_blank"> <span>Twitter</span></a></li>
+<li><a class="fb-widget" href="https://www.facebook.com/campusMVP" target="_blank"> <span>Facebook</span></a></li>
+<li><a class="gplus-widget" href="https://plus.google.com/+CampusmvpEs" target="_blank"> <span>Google+</span></a></li>
+<li><a class="YT-widget" href="https://www.youtube.com/user/campusMVPes" target="_blank"> <span>YouTube</span></a></li>
+<li><a class="Sbd-widget" href="https://www.scribd.com/krasispress" target="_blank"> <span>Scribd</span></a></li>
+<li><a class="rss-widget" href="https://www.campusmvp.es/recursos/syndication.axd" target="_blank"> <span>RSS</span></a></li>
+</ul>
+          
+    </div>
+</div>
+<div class="Widget recentposts" id="widgetb1cde929-98d5-443b-9611-6857d6b4bf05">
+  
+    
+   <div class="WidgetHeader">
+        Artículos recientes</div>
+    
+    <div class="WidgetContent">
+        <ul class="recentPosts" id="recentPosts"><li><a href="https://www.campusmvp.es/recursos/post/bibliotecas-de-animaciones-con-css-y-javascript.aspx">9 bibliotecas de animaciones y efectos con CSS y JavaScript que deberías tener siempre a mano</a></li><li><a href="https://www.campusmvp.es/recursos/post/10-consejos-que-deberias-seguir-para-ser-un-gran-programador.aspx">10 consejos que deberías seguir para ser un gran programador</a></li><li><a href="https://www.campusmvp.es/recursos/post/que-diferencias-hay-entre-entity-framework-6-tradicional-y-entity-framework-core.aspx">Qué diferencias hay entre Entity Framework 6 "tradicional" y Entity Framework Core</a></li><li><a href="https://www.campusmvp.es/recursos/post/frikadas-el-traje-de-batman-real-que-rompe-todos-los-records.aspx">FRIKADAS: El traje de batman real que rompe todos los records</a></li><li><a href="https://www.campusmvp.es/recursos/post/tiene-sentido-yarn-ahora-que-tenemos-npm-5.aspx">¿Tiene sentido Yarn ahora que tenemos npm 5?</a></li></ul>
+          
+    </div>
+</div>
+<div class="Widget linklist" id="widget54c76c80-9f35-47b5-8b7e-040da77299b8">
+  
+    
+   <div class="WidgetHeader">
+        Nuestros Cursos y Libros</div>
+    
+    <div class="WidgetContent">
+        <ul id="ctl00_widgetContainer54c76c809f3547b58b7e040da77299b8_54c76c809f3547b58b7e040da77299b8_ulLinks"><li><a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Desarrollo-Web_30.aspx">Cursos de Programación Web</a></li><li><a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Desarrollo-para-M%C3%B3viles-y-Tablets_57.aspx">Programación para Móviles y Tablets</a></li><li><a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Acceso-a-Datos_31.aspx">Cursos de Acceso a Datos</a></li><li><a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Lenguajes-y-plataformas_29.aspx">Cursos de Lenguajes y Plataformas</a></li><li><a href="https://www.campusmvp.es/catalogo/Catalog-Preparaci%C3%B3n-de-Certificaciones-de-Desarrollo_48.aspx">Preparación de Certificaciones de Desarrollo</a></li><li><a href="https://www.campusmvp.es/catalogo/Catalog-Otros-Cursos-y-Libros_34.aspx">Otros cursos y libros</a></li></ul>
+
+          
+    </div>
+</div>
+<div class="Widget textbox" id="widget0e1aa815-2eeb-4ab8-9b64-ccc882bbf6c4">
+  
+    
+   <div class="WidgetHeader">
+        Últimos vídeos</div>
+    
+    <div class="WidgetContent">
+        <div id="YouTubeRecentVideos"><iframe src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/ldG2HSvdSz0.html" allowfullscreen="" height="200" frameborder="0" width="300"></iframe><br><iframe src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/FP138UhcB-k.html" allowfullscreen="" height="200" frameborder="0" width="300"></iframe><br><iframe src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/OIyd9tNMX18.html" allowfullscreen="" height="200" frameborder="0" width="300"></iframe><br></div>
+<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/YouTubeListVideos.js"></script>
+<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/videosCampusMVP.js"></script>
+<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/client.js" gapi_processed="true"></script>
+          
+    </div>
+</div>
+<div class="Widget recentcomments" id="widgetbd962c99-4ea8-47fa-a171-dde4b808a2c8">
+  
+    
+   <div class="WidgetHeader">
+        RecentComments</div>
+    
+    <div class="WidgetContent">
+        <ul id="recentComments" class="recentComments"><li><a href="https://www.campusmvp.es/recursos/post/como-hacer-comentarios-en-html.aspx" class="postTitle">¿Cómo se hacen comentarios en HTML?</a> (1)<br>Ruben escribió: Me parece bien como enseñan en este sitio <a href="https://www.campusmvp.es/recursos/post/como-hacer-comentarios-en-html.aspx#id_87111f0f-1473-4e8d-9234-571de520862e" class="moreLink">[Más]</a></li><li><a href="https://www.campusmvp.es/recursos/post/CSharp-o-VBNET-que-lenguaje-debo-aprender.aspx" class="postTitle">C# o VB.NET ¿qué lenguaje debo aprender?</a> (39)<br>Erwin escribió: He buscado y leído mucho acerca de este tema, pero... <a href="https://www.campusmvp.es/recursos/post/CSharp-o-VBNET-que-lenguaje-debo-aprender.aspx#id_7203f292-79f8-4f3f-8c1b-7bcc6b6892f5" class="moreLink">[Más]</a></li><li><a href="https://www.campusmvp.es/recursos/post/Como-usar-JSON-en-NET-facilmente.aspx" class="postTitle">Cómo usar JSON en .NET fácilmente con C#</a> (2)<br>Alberto García escribió: Copia en el portapapeles el json, te vas a Visual ... <a href="https://www.campusmvp.es/recursos/post/Como-usar-JSON-en-NET-facilmente.aspx#id_978fda50-8002-48f6-88c1-06fab7cc94a2" class="moreLink">[Más]</a></li><li><a href="https://www.campusmvp.es/recursos/post/Que-lenguajes-de-programacion-hay-que-dominar-en-2015.aspx" class="postTitle">Qué lenguajes de programación hay que dominar en 2015</a> (47)<br>apps design escribió: te has esforzado redactando este artículo yo creo,... <a href="https://www.campusmvp.es/recursos/post/Que-lenguajes-de-programacion-hay-que-dominar-en-2015.aspx#id_12126084-68c5-468d-81fb-72121fcdc0b1" class="moreLink">[Más]</a></li><li><a href="https://www.campusmvp.es/recursos/post/Programacion-movil-Que-herramienta-y-lenguaje-elegir.aspx" class="postTitle">Programación móvil: Qué herramienta y lenguaje elegir</a> (23)<br>Leonardo escribió: Y nunca hablaron de Delphi XE,   o de Basic4Androi... <a href="https://www.campusmvp.es/recursos/post/Programacion-movil-Que-herramienta-y-lenguaje-elegir.aspx#id_a35f3203-f689-4c25-a147-08023b6282da" class="moreLink">[Más]</a></li></ul><a href="https://www.campusmvp.es/recursos/syndication.axd?comments=true">Comment RSS <img src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/rssButton.png" alt=""></a>
+          
+    </div>
+</div></div>
+            </aside>
+        </div>
+
+
+
+
+        <div id="footer-wrapper">
+
+
+
+        <div id="footer-inner">
+
+
+            <div id="footer-4col-grid">
+
+                <div class="footer-col1">
+
+
+                    <div class="footer-col1-content">
+
+                             <p>    <a title="Los mejores cursos online para programadores" href="https://www.campusmvp.es/">
+                                 <img style="padding-top:10px;" alt="campusMVP.es" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/logo.png"></a></p>
+
+                        <ul class="social">
+
+
+                            <li><a class="twitter" title="Twitter" target="_blank" href="https://twitter.com/campusmvp"> <span>Twitter</span></a> </li>
+
+                            <li><a class="facebook" title="Facebook" target="_blank" href="https://facebook.com/campusmvp"> <span>Facebook</span></a> </li>
+
+                            <li><a class="scribd" title="Scribd" target="_blank" href="https://es.scribd.com/krasispress"> <span>Scribd</span></a> </li>
+
+                            <li><a class="googleplus" href="https://plus.google.com/116785939008168383898" target="_blank"> <span>Google+</span></a> </li>
+
+                            <li><a class="feed" title="Rss Feed" target="_blank" href="https://www.campusmvp.es/recursos/syndication.axd"> <span>Rss Feed</span></a> </li>
+
+                            <li><a class="youTube" title="You Tube" target="_blank" href="https://www.youtube.com/campusmvpes"> <span>You Tube</span></a> </li>
+
+                        </ul>
+
+
+								<p style="display:none" class="contact-data">Avda. de Madrid 18 7 A<br>
+								36204 - Vigo (Pontevedra) - Espa?a<br>
+								tel: +34 986 165 802<br>
+								</p>
+
+							<ul class="clear-left">
+								<li class="ico-blue"><a href="https://www.campusmvp.es/contacto.htm">
+
+								Contacta con nosotros</a></li>
+
+							</ul>
+
+                                <p class="paypal"> <a href="https://www.campusmvp.es/como-comprar.htm"> <img src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/visa-mastercard.png" alt="Garant?a de pago seguro "></a> </p>
+
+                    </div>
+
+                </div>
+                  <div class="footer-col2">
+
+
+						<div class="footer-col2-content">
+							<ul>
+								<li>
+								<a href="https://www.campusmvp.es/conocenos.htm" title="Por qu? nosotros">
+								Por qué campusMVP</a></li>
+
+								<li>
+								<a href="https://www.campusmvp.es/tutores-autores.htm" title="Nuestros tutores y autores">
+								Nuestros tutores y autores</a></li>
+
+                               <li>
+								<a href="https://www.campusmvp.es/aprender-a-programar-online.htm" title="C?mo aprender a programar">
+								Cómo aprender a programar</a>
+
+                                </li>
+
+                                <li>
+								<a href="https://www.campusmvp.es/empresas.htm" title="Servicios para empresas">
+								Servicios para empresas</a>
+
+                                </li>
+
+                                <li>
+								<a href="https://www.campusmvp.es/formacion-bonificada.htm" title="Cursos gratuitos para empresas">
+								Cursos gratuitos para empresas</a>
+
+                                </li>
+
+                                 <li>
+								<a href="https://www.campusmvp.es/Descuentos.htm" title="Descuentos">
+								Descuentos</a>
+
+                                </li>
+
+                                  <li>
+								<a href="https://www.campusmvp.es/faq-preguntas-frecuentes.htm" title="Preguntas Frecuentes">
+								Preguntas Frecuentes</a>
+
+                                </li>
+
+                                   <li>
+								<a href="https://www.campusmvp.es/Boletin.htm" title="Bolet?n de Novedades">
+								Boletín de Novedades</a>
+
+                                </li>
+
+                                   <li>
+								<a href="https://www.campusmvp.es/krasis-press.htm" title="Libros Krasis Press">
+								Libros Krasis Press</a>
+
+                                </li>
+
+							</ul>
+						</div>
+
+
+                  </div>
+
+
+
+                  <div class="footer-col3">
+
+						<div class="footer-col3-content">
+
+                            <ul>
+
+								<li><a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Desarrollo-Web_30.aspx" title="Cursos de programación Web"> <img alt="Cursos de desarrollo Web" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/cursos-desarrollo-web-radius.png"><span>Cursos de programación Web</span></a></li>
+							    <li class="padding-top"> <a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Acceso-a-Datos_31.aspx" title="Cursos de bases de datos"> <img alt="Cursos de acceso a datos" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/cursos-bases-de-datos-radius.png"><span>Cursos de bases de datos</span></a></li>
+                                <li class="padding-top"> <a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Visual-Studio-y-.NET_29.aspx" title="Cursos de Lenguajes y Plataformas de desarrollo"> <img alt="Cursos de Lenguajes de programación y Plataformas" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/cursos-visualStudio-y-punto-net-radius.png"> <span>Cursos de Lenguajes y Plataformas</span></a></li>
+
+                            </ul>
+
+
+
+
+
+						</div>
+
+                  </div>
+
+
+
+                  <div class="footer-col4">
+
+
+						<div class="footer-col4-content">
+
+					 <ul>
+
+                                <li>
+								<a href="https://www.campusmvp.es/catalogo/Catalog-Preparaci%C3%B3n-de-Certificaciones-de-Desarrollo_48.aspx" title="Cursos de preparación de Certificaciones Microsoft">
+								<img alt="Cursos de preparación de Certificaciones Microsoft" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/preparacion-certificaciones-microsoft-radius.png"><span>Certificaciones
+								de Microsoft</span></a></li>
+                                	<li class="padding-top">
+								<a href="https://www.campusmvp.es/catalogo/Catalog-Otros-Cursos-y-Libros_34.aspx" title="Otros cursos y libros">
+								<img alt="Libros de programación Krasis Press" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/libros-programacion-radius.png"><span>Otros cursos y libros</span></a></li>
+
+                         <li class="padding-top">
+								<a href="https://www.campusmvp.es/catalogo/Catalog-Cursos-de-Desarrollo-para-m%C3%B3viles-y-Tablets_57.aspx" title="Cursos de desarrollo m?vil">
+								<img alt="Cursos de desarrollo para móviles y tablets" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/cursos-desarrollo-movil-radius.png"><span>Cursos de desarrollo móvil</span></a></li>
+
+
+                            </ul>
+
+					</div>
+
+
+                  </div>
+
+                         <a title="ver cat?logo completo de cursos y libros" id="footer-link-catalogo" href="https://www.campusmvp.es/catalogo/">Ver catálogo completo de cursos y libros</a>
+
+
+
+            </div>
+
+        </div>
+
+
+                <p class="copyright"><strong>© CampusMVP.com</strong> - <a href="https://www.krasis.com/aviso_legal.htm" target="_blank" rel="noindex nofollow" title="Términos de uso y política de privacidad">
+							Aviso Legal</a> <!--- <a class="cc-privacy-link" href="#" title="Preferencias de cookies"><span>
+							Preferencias de cookies</span></a>--></p>
+
+</div>
+
+        <!--FOOTER TEMPORAL PARA ACCEDER AL BLOG-->
+
+
+        <div class="Footer">
+
+          <!--  <div class="Footer-Widget-Container Container">
+                <div id="widgetzone_Footer-Widet" class="widgetzone"></div>
+            </div>-->
+
+
+
+
+
+
+            <div class="End-Line">
+                <div class="Container">
+                    <nav class="Footer-Menu">
+                        <ul class="ClearFix">
+                            <li class="item-one Home"><a href="https://www.campusmvp.es/recursos/" rel="home"><span>Inicio</span></a> |</li>
+							<li class="item-two"><a href="https://www.campusmvp.es/recursos/page/Acerca-de.aspx"><span>Sobre mi</span></a> |</li>
+                            <li class="item-three"><a href="https://www.campusmvp.es/recursos/archive.aspx">Archivo</a> |</li>
+                            <li class="item-four"><a href="https://www.campusmvp.es/recursos/contact.aspx"><span>Contacto</span></a> |</li>
+                            <li class="item-five"><a href="https://www.campusmvp.es/recursos/Account/login.aspx" id="ctl00_aLogin">Iniciar sesión</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+			<span class="scrollup"></span>
+        </div>
+
+
+        <script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/scripts.js" type="text/javascript"></script>
+        <script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/jquery-1.js" type="text/javascript"></script>
+        <script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/app.js" type="text/javascript"></script>
+        <script src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/newsletter.js" type="text/javascript" language="javascript"></script>
+    
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C751377C" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="vHzXGkyqtxY89560wi5knsCkvfVfv5rYjFijGX0HmaHRFKyqSXcjYuo9V3k1F1ilvJggIh2r+c72ALucfoz6DCVXqZJ5+yUjrs5jhFO18DvpN+lTJXxyFLBmOmwVeWXpXRdOSw==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var 
+callBackFrameUrl='/recursos/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdbqv_vsrVPNz5iJHVLj4a15-W6AG51mW0EakKiepjfuzRoi0AQ2&t=636284154552661246';
+WebForm_InitCallback();//]]>
+</script>
+</form>
+
+
+<!-- Google Code for Etiqueta de remarketing: -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript" class="cc-onconsent-advertising">
+/* <![CDATA[ */
+var google_conversion_id = 1068067413;
+var google_conversion_label = "ranDCIeo8QQQ1dSl_QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" 
+src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1068067413/?value=1.000000&amp;label=ranDCIeo8QQQ1dSl_QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<link rel="stylesheet" type="text/css" href="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/cookieconsent.css">
+<script type="text/javascript" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/cookieconsent.js"></script><iframe name="oauth2relay849210439" id="oauth2relay849210439" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/postmessageRelay.html" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe>
+<script type="text/javascript">
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#ff9900"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "Usamos cookies propias y de terceros para medir y mejorar la experiencia de uso en esta página.",
+    "dismiss": "Entendido",
+    "link": "Ver política de privacidad",
+    "href": "http://www.krasis.com/aviso_legal.htm"
+  }
+})});
+</script>
+<!-- End Cookie Consent plugin -->
+
+
+<iframe id="apiproxy6e70891d68fb31f21b3db63ad0aaaef7198065530.3618307733" name="apiproxy6e70891d68fb31f21b3db63ad0aaaef7198065530.3618307733" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;" src="Rendimiento%20de%20algoritmos%20y%20notaci%C3%B3n%20Big-O_files/proxy.html" tabindex="-1" aria-hidden="true"></iframe></body></html>
