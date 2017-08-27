@@ -569,7 +569,7 @@ Write code on a whiteboard or paper, not a computer. Test with some sample input
         - [Pointers to Pointers](https://www.eskimo.com/~scs/cclass/int/sx8.html)
     - [ ] implement (I did with tail pointer & without):
         - [x] size() - returns number of data elements in list
-        - [ ] empty() - bool returns true if empty
+        - [x] empty() - bool returns true if empty
         - [ ] value_at(index) - returns the value of the nth item (starting at 0 for first)
         - [x] push_front(value) - adds an item to the front of the list
         - [x] pop_front() - remove front item and return its value
