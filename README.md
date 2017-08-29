@@ -1,5 +1,5 @@
 # Oscar Albornoz
->Hello, I am currently following this guide, all the boxes marked with X represent my completed steps.
+Hello, I am currently following this guide, all the boxes marked with X represent my completed steps.
 - [My progress](#prerequisite-knowledge)
 - [My codes](https://github.com/skaptox/Practices)
 
