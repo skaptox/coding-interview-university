@@ -1,7 +1,10 @@
 # Oscar Albornoz
 Hello, I am currently following this guide, all the boxes marked with X represent my completed steps.
 - [My progress](#prerequisite-knowledge)
-- [My codes](https://github.com/skaptox/Practices)
+
+  My implementations
+- [Algorithms](https://github.com/skaptox/Algorithms) - [Data Structures](https://github.com/skaptox/Data-Structures)
+
 
 
 ## Coding Interview University
