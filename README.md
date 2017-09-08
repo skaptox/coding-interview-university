@@ -2,8 +2,8 @@
 Hello, I am currently following this guide, all the boxes marked with X represent my completed steps.
 - [My progress](#prerequisite-knowledge)
 
-  My implementations
-- [Algorithms](https://github.com/skaptox/Algorithms) - [Data Structures](https://github.com/skaptox/Data-Structures)
+- My implementations
+ [Algorithms](https://github.com/skaptox/Algorithms) - [Data Structures](https://github.com/skaptox/Data-Structures)
 
 
 
@@ -1977,3 +1977,4 @@ Sit back and enjoy. "Netflix and skill" :P
 
 - [Directory of Online CS Courses](https://github.com/open-source-society/computer-science)
 - [Directory of CS Courses (many with online lectures)](https://github.com/prakhar1989/awesome-courses)
+-
